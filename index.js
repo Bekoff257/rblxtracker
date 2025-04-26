@@ -63,7 +63,7 @@ async function trackUser() {
     }
 
     if (lastStatus !== statusText) {
-        bot.sendMessage(CHAT_ID, `📢 Roblox User Status Update:\n👤 **${username}**\n${statusText}`);
+        bot.sendMessage(CHAT_ID, `📢 Roblox User Status Update:\n👤 **${username}**\n${statusText}`, { parse_mode: "Markdown" });
         lastStatus = statusText;
     }
 }
