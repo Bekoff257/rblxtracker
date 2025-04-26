@@ -63,7 +63,7 @@ async function trackUser() {
     }
 
     if (lastStatus !== statusText) {
-        bot.sendMessage(CHAT_ID, `📢 Roblox User Status Update:\n👤 **${username}**\n${statusText}`, { parse_mode: "Markdown" });
+        bot.sendMessage(CHAT_ID, `📢 Roblox User Status Update:\n👤 **${username}**\n${statusText}`);
         lastStatus = statusText;
     }
 }
@@ -75,3 +75,5 @@ bot.onText(/\/start/, (msg) => {
 });
 
 console.log("✅ Telegram bot started...");
+
+// , { parse_mode: "Markdown" }
